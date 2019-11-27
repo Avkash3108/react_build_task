@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const port = 8080;
 
 module.exports = {
     devServer: {
@@ -7,7 +8,7 @@ module.exports = {
         historyApiFallback: true,
         host: '0.0.0.0',
         hot: true,
-        port: 8080,
+        port,
         stats: {
             cached: false,
             cachedAssets: false,

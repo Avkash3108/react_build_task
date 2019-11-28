@@ -1,10 +1,20 @@
 {
-  "name": "react_build_task",
+  "name": "@Avkash3108/react_build_task",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "react_build_task": "./index.js"
+   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/Avkash3108/react_build_task/react_build_task.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "",

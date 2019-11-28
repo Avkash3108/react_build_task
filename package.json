@@ -1,6 +1,6 @@
 {
   "name": "@avkash3108/react_build_task",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/avkash3108/react_build_task/react_build_task.git"
+    "url": "git@github.com/avkash3108/react_build_task.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

@@ -1,4 +1,4 @@
-const styleLoaders =require('style-loader');
+const styleLoaders =require('./loaders/styles/style-loaders');
 const webpack = require('webpack');
 const port = 8080;
 

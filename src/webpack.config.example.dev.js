@@ -1,3 +1,4 @@
+const styleLoaders =require('style-loader');
 const webpack = require('webpack');
 const port = 8080;
 
@@ -29,7 +30,7 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             }
-        ]
+        ].concat(styleLoaders)
     },
     output: {
         'filename': 'app.js',

@@ -1,10 +1,10 @@
 {
   "name": "@avkash3108/react_build_task",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "hello": "node ./bin/build-task hello"
   },
   "bin": {
     "react-build-task": "./bin/build-task.js"
@@ -35,9 +35,6 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "devDependencies": {
-    "yargs": "^15.1.0"
-  },
-  "scripts": {
-    "hello": "node ./bin/build-task hello"
+    "yargs": "^15.3.0-beta.0"
   }
 }

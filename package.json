@@ -1,13 +1,13 @@
 {
   "name": "@avkash3108/react_build_task",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "react_build_task": "./index.js"
+    "react-build-task": "./bin/build-task.js"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,11 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
     "webpack-hot-middleware": "^2.25.0"
+  },
+  "devDependencies": {
+    "yargs": "^15.1.0"
+  },
+  "scripts": {
+    "hello": "node ./bin/build-task hello"
   }
 }

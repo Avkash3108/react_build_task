@@ -1,4 +1,4 @@
-var loaders = [
+const loaders = [
     {
     	test: /\.css$/,
     	use: [

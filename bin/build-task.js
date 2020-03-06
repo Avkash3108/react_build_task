@@ -1,21 +1,20 @@
 #!/usr/bin/env node
+const yargs = require('yargs');
+const packageUtils = require('../src/utils/packageUtils');
+const pkg = packageUtils.getConsumingPackage();
+const build = require('../src/tasks/build');
 
-var path = require('path');
-var consumingPackagePath = path.join(process.cwd(), 'package.json'); 
-var package = require(consumingPackagePath);
-
-
-require('yargs')
-  .scriptName("pirate-parser")
+yargs.scriptName("pirate-parser")
   .usage('$0 <cmd> [args]')
   .command('hello [name]', 'welcome to react buid task world!', (yargs) => {
     yargs.positional('name', {
       type: 'string',
-      default: package.name,
+      default: pkg.name,
       describe: 'the consumer to say hello to'
     })
   }, function (argv) {
-    console.log('hello', argv.name, 'welcome to yargs!')
+    console.log('Hello', argv.name, 'welcome to react buid task world!!')
   })
+  .command(build)
   .help()
   .argv

@@ -1,5 +1,9 @@
 module.exports = {
-    get WebpackConfigExampleDevServer() {
-        return require('./src/webpack.config.example.dev');
+    get WebpackDevServerConfig() {
+        return require('./src/webpack.dev.config');
+    }
+
+    get WebpackProdServerConfig() {
+        return require('./src/webpack.prod.config');
     }
 };  

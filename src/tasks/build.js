@@ -1,8 +1,8 @@
 const rimraf = require('rimraf');
 const pathUtils = require('../utils/pathUtils')
 
-function runCommand(params) {
-	const config = pathUtils.getConsumingPackageResourcePath(params.config);
+function run(params) {
+	const config = require(pathUtils.getConsumingPackageResourcePath(params.config));
 	const webpack = require('webpack');
 
 	if(params.clean) {
@@ -21,8 +21,8 @@ exports.builder = {
 		type: 'boolean'
 	},
 	config: {
-		default: 'webpack.prod.config',
+		default: 'webpack.prod.config.js',
 		type: 'string'
 	}
 };
-exports.builder = runCommand
+exports.handler = run

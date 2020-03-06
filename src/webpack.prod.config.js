@@ -2,7 +2,7 @@ const styleLoaders =require('./loaders/styles/style-loaders');
 const packageUtils = require('./utils/packageUtils');
 const pathUtils = require('./utils/pathUtils');
 const pkg = packageUtils.getConsumingPackage();
-const TerserPlugin = require(terser-webpack-Plugin);
+const TerserPlugin = require('terser-webpack-Plugin');
 
 module.exports = {
     Bail: true,

@@ -1,6 +1,27 @@
 const rimraf = require('rimraf');
 const pathUtils = require('../utils/pathUtils')
 
+
+function showErrors(errors) {
+	console.error(errors.stack || errors)
+
+	if(errors.details) {
+		console.error(errors.details);
+	}
+	process.exit(1);
+}
+
+
+function showStats(stats) {
+	console.log(stats.toString({
+		color: true
+	}));
+
+	if(stats.hasErrors()) {
+		process.exit(1);
+	}
+}
+
 function run(params) {
 	const config = require(pathUtils.getConsumingPackageResourcePath(params.config));
 	const webpack = require('webpack');
@@ -9,7 +30,7 @@ function run(params) {
 		rimraf.sync(config.output.path);
 	}
 	webpack(config).run((errors, stats) => {
-		errors ? console.log(errors) :  console.log(stats);
+		errors ? showErrors(errors) :  showStats(stats);
 	})
 }
 

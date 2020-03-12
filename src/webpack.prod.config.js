@@ -5,9 +5,9 @@ const pkg = packageUtils.getConsumingPackage();
 const TerserPlugin = require('terser-webpack-Plugin');
 
 module.exports = {
-    Bail: true,
+    bail: true,
     mode: 'production',
-    entry: '/index',
+    entry: './examples/index.js',
     module: {
         rules: [
             {
@@ -33,7 +33,13 @@ module.exports = {
         ]
     },
     output: {
-        filename: `${pkg.name}`,
+        filename: `${pkg.name}.js`,
         path: pathUtils.getConsumingPackageResourcePath('dist')
+    },
+    performance: {
+        hints: process.env.NODE_ENV === 'production' ? "warning" : false
+    },
+    resolve: {
+        extensions: [".js", ".jsx", ".json"]
     }
 };

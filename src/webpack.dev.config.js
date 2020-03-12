@@ -1,6 +1,6 @@
 const styleLoaders =require('./loaders/styles/style-loaders');
 const webpack = require('webpack');
-const port = 8080;
+const port = 5555;
 
 module.exports = {
     devServer: {

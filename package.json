@@ -1,6 +1,6 @@
 {
   "name": "@avkash3108/react_build_task",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^6.0.0",
     "css-loader": "^3.4.2",

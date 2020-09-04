@@ -1,4 +1,5 @@
 const styleLoaders =require('./loaders/styles/style-loaders');
+const assetsLoaders =require('./loaders/assets/assets-loaders');
 const packageUtils = require('./utils/packageUtils');
 const pathUtils = require('./utils/pathUtils');
 const pkg = packageUtils.getConsumingPackage();

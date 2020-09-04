@@ -17,7 +17,7 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             }
-        ].concat(styleLoaders)
+        ].concat(styleLoaders).concat(assetsLoaders)
     },
     optimization: {
         minimize: true,

@@ -1,4 +1,5 @@
 const styleLoaders =require('./loaders/styles/style-loaders');
+const assetsLoaders =require('./loaders/assets/assets-loaders');
 const webpack = require('webpack');
 const port = 5555;
 
@@ -31,7 +32,7 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             }
-        ].concat(styleLoaders)
+        ].concat(styleLoaders).concat(assetsLoaders)
     },
     output: {
         'filename': 'app.js',

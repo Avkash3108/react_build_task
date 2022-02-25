@@ -1,21 +1,20 @@
 const styleLoaders =require('./loaders/styles/style-loaders');
 const assetsLoaders =require('./loaders/assets/assets-loaders');
 const webpack = require('webpack');
+const path  = require('path');
 const port = 5555;
 
 module.exports = {
     devServer: {
-        contentBase: './examples',
-        disableHostCheck: true,
-        historyApiFallback: true,
-        host: '0.0.0.0',
-        hot: true,
-        port,
-        stats: {
-            cached: false,
-            cachedAssets: false,
-            colors: true
-        }
+        static: [
+            {
+              directory: "./examples"
+            }
+        ],
+        allowedHosts: "all",
+        host: '127.0.0.1',
+        hot: 'only',
+        port
     },
     mode: 'development',
     entry: [
@@ -40,7 +39,6 @@ module.exports = {
         'publicPath': '/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ]
 };
